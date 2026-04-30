@@ -1,0 +1,3 @@
+Establish Neon Database connection via SQL Alchemy
+Obtain CSV files of relevant data for location and time
+Use pandas to read CSVs and push to DB related information
