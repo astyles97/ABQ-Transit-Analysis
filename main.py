@@ -25,17 +25,17 @@ w2024a = pd.read_csv("data/raw/DSW2024A.csv",
 
 # Labor Statistics Quarterly
 w2019q = pd.read_csv("data/raw/w2019Q.csv",
-                     usecols=['year', 'qtr', "industry_title", 'avg_wkly_wage'])
+                     usecols=['year', 'qtr', "industry_title", 'industry_code', 'avg_wkly_wage'])
 w2020q = pd.read_csv("data/raw/w2020Q.csv",
-                     usecols=['year', 'qtr', "industry_title", 'avg_wkly_wage'])
+                     usecols=['year', 'qtr', "industry_title", 'industry_code', 'avg_wkly_wage'])
 w2021q = pd.read_csv("data/raw/w2021Q.csv",
-                     usecols=['year', 'qtr', "industry_title", 'avg_wkly_wage'])
+                     usecols=['year', 'qtr', "industry_title", 'industry_code', 'avg_wkly_wage'])
 w2022q = pd.read_csv("data/raw/w2022Q.csv",
-                     usecols=['year', 'qtr', "industry_title", 'avg_wkly_wage'])
+                     usecols=['year', 'qtr', "industry_title", 'industry_code', 'avg_wkly_wage'])
 w2023q = pd.read_csv("data/raw/w2023Q.csv",
-                     usecols=['year', 'qtr', "industry_title", 'avg_wkly_wage'])
+                     usecols=['year', 'qtr', "industry_title", 'industry_code', 'avg_wkly_wage'])
 w2024q = pd.read_csv("data/raw/w2024Q.csv",
-                     usecols=['year', 'qtr', "industry_title", 'avg_wkly_wage'])
+                     usecols=['year', 'qtr', "industry_title", 'industry_code', 'avg_wkly_wage'])
 
 # labor_stats_all = pd.concat([w2020a, w2021a, w2022a, w2023a, w2024a], ignore_index=True)
 # labor_stats_all.to_sql("Bernalillo County and ABQ MSA Labor Statistics", engine, if_exists='append', index=False)
