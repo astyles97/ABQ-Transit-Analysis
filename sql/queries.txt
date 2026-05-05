@@ -1,0 +1,6 @@
+#1
+SELECT * FROM "Quarterly Albuquerque MSA Labor Statistics"
+WHERE industry_code IN ('44', '45', '56', '61', '62', '71', '72', '48', '49', '92')
+ORDER BY year;
+
+#2
