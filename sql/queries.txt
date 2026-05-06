@@ -7,9 +7,26 @@ ORDER BY year;
 SELECT
     r."Quarter",
     r."Total Ridership",
-    SUM(l.month1_emplvl + l.month2_emplvl + l.month3_emplvl) / 3 AS avg_employment
+    ROUND(SUM(l.month1_emplvl + l.month2_emplvl + l.month3_emplvl) / 3) AS avg_employment
 FROM "Quarterly City of Albuquerque Bus Ridership" r
 JOIN "Quarterly Albuquerque MSA Labor Statistics" l
     ON r."Quarter" = l.quarter
+GROUP BY r."Quarter", r."Total Ridership"
+ORDER BY r."Quarter";
+
+#3
+SELECT
+  r."Quarter",
+  ROUND(r."Total Ridership" /
+  (SELECT "Total Ridership"
+  FROM "Quarterly City of Albuquerque Bus Ridership"
+  WHERE "Quarter" = '2019Q1') * 100 ) AS ridership_index,
+  ROUND(SUM(month1_emplvl + month2_emplvl + month3_emplvl) / 3 /
+  (SELECT SUM(month1_emplvl + month2_emplvl + month3_emplvl) / 3
+  FROM "Quarterly Albuquerque MSA Labor Statistics"
+  WHERE "Quarter" = '2019Q1') * 100 ) AS employment_index
+FROM "Quarterly City of Albuquerque Bus Ridership" r
+JOIN "Quarterly Albuquerque MSA Labor Statistics" l
+  ON r."Quarter" = l."Quarter"
 GROUP BY r."Quarter", r."Total Ridership"
 ORDER BY r."Quarter";

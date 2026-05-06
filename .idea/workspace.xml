@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f384de10-44fd-4e74-90bc-bb1869ddf9a2" name="Changes" comment="Added data and built env">
-      <change afterPath="$PROJECT_DIR$/Notebook.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/raw/UPTBigSheet.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/raw/UPTBigSheet.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/queries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sql/queries.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="38" />
+    <option name="cachedIndexableFilesCount" value="39" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -100,7 +97,8 @@
       <workItem from="1778000963243" duration="2492000" />
       <workItem from="1778004013695" duration="4736000" />
       <workItem from="1778010386816" duration="6933000" />
-      <workItem from="1778080783848" duration="8417000" />
+      <workItem from="1778080783848" duration="10494000" />
+      <workItem from="1778103309061" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="Added data and built env">
       <option name="closed" value="true" />
