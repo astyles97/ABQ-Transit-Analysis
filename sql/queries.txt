@@ -4,3 +4,12 @@ WHERE industry_code IN ('44', '45', '56', '61', '62', '71', '72', '48', '49', '9
 ORDER BY year;
 
 #2
+SELECT
+    r."Quarter",
+    r."Total Ridership",
+    SUM(l.month1_emplvl + l.month2_emplvl + l.month3_emplvl) / 3 AS avg_employment
+FROM "Quarterly City of Albuquerque Bus Ridership" r
+JOIN "Quarterly Albuquerque MSA Labor Statistics" l
+    ON r."Quarter" = l.quarter
+GROUP BY r."Quarter", r."Total Ridership"
+ORDER BY r."Quarter";

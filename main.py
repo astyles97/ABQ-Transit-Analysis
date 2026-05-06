@@ -46,14 +46,27 @@ w2024q = pd.read_csv("data/raw/w2024Q.csv",
 # labor_stats_all = pd.concat([w2020a, w2021a, w2022a, w2023a, w2024a], ignore_index=True)
 # labor_stats_all.to_sql("Bernalillo County and ABQ MSA Labor Statistics", engine, if_exists='append', index=False)
 
-# labor_stats_quarterly = pd.concat([w2019q, w2020q, w2021q, w2022q, w2023q, w2024q], ignore_index=True)
+labor_stats_quarterly = pd.concat([w2019q, w2020q, w2021q, w2022q, w2023q, w2024q], ignore_index=True)
+labor_stats_quarterly['quarter'] = labor_stats_quarterly['year'].astype(str) + 'Q' + labor_stats_quarterly['qtr'].astype(str)
 # labor_stats_quarterly.to_sql("Quarterly Albuquerque MSA Labor Statistics", engine, if_exists='replace', index=False)
 
 #Ridership data
-# riders = pd.read_csv("data/raw/UPTBigSheet.csv")
-# riders_all = riders.iloc[1556:1559]
+riders = pd.read_csv("data/raw/UPTBigSheet.csv")
+riders_all = riders.iloc[1556:1559]
 
-# riders_all.to_sql("City of Albuquerque Bus Ridership", engine, if_exists='append', index=False)
+
+month_cols = [col for col in riders_all.columns if '/' in col]
+riders_abq = pd.melt(riders_all, id_vars=['Agency'], value_vars= month_cols, var_name='Months', value_name='Monthly Ridership')
+
+riders_abq['Months'] = pd.to_datetime(riders_abq['Months'], format='%m/%Y', errors='coerce')
+riders_abq["Agency"] = "City of Albuquerque"
+riders_abq.groupby(['Months'])['Monthly Ridership'].sum().reset_index()
+riders_abq['Quarter'] = riders_abq['Months'].dt.to_period('Q')
+riders_quarterly = riders_abq.groupby(['Quarter'])['Monthly Ridership'].sum().reset_index()
+riders_quarterly.columns = ['Quarter', 'Total Ridership']
+riders_quarterly['Quarter'] = riders_quarterly['Quarter'].astype('str')
+
+# riders_quarterly.to_sql("Quarterly City of Albuquerque Bus Ridership", engine, if_exists='replace', index=False)
 
 
 
