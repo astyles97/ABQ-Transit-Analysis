@@ -22,7 +22,9 @@ Jupyter Notebook
 
 ## Results
 
-TBA
+WORK IN PROGRESS
+
+https://public.tableau.com/app/profile/adam.styles1536/viz/2019-2024AlbuquerqueRidershipandEmploymentIndex/Sheet1#1
 
 
 
