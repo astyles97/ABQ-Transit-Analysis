@@ -37,7 +37,7 @@ Both ridership and employment are indexed to 2019Q1 (= 100), representing pre-pa
 
 
 
-References:
+References: \
 https://nextcity.org/urbanist-news/what-free-transit-looks-like-in-albuquerque-nearly-two-years-after-the-city
 https://www.cabq.gov/transit/news/zero-fares-is-here-to-stay
 
