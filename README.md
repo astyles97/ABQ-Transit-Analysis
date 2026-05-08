@@ -23,7 +23,7 @@ SQL
 
 ## Results
 
-###Data Visialization:
+### Data Visialization:
 https://public.tableau.com/app/profile/adam.styles1536/viz/2019-2024AlbuquerqueRidershipandEmploymentIndex/Sheet1#1
 
 In October of 2022, Albuquerque made its public bus transportation system fare free. Since that initiative began, ridership increased by 20%. Of the 23,800 ABQ RIDE daily riders, 88% live in a household making less than $35,000 annually. The data presented in this chart shows the correlation of the employment rate to bus ridership. Industries related to food service, retail,  health care, arts/entertainment, transportation, finance, and public administration. These were chosen on the criteria that they are lower-paying jobs or jobs located in the city downtown.
